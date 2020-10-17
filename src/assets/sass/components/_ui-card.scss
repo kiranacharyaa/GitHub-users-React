@@ -1,0 +1,26 @@
+.ui-card {
+    background-color: #fff;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+}
+
+.ui-card--15 {
+    padding: 15px;
+}
+
+.ui-card_header {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.ui-card_header-title {
+    margin: 0;
+    display: inline-block;
+}
+
+.ui-card_body {
+    padding: 15px;
+}

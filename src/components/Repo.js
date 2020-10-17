@@ -4,11 +4,11 @@ import {AppContext} from './../context/AppContext';
 
 function Repo() {
 
-    const {userRepos} = useContext(AppContext);
+    const {userRepos, sorted} = useContext(AppContext);
 
     return (
         <div className="row">
-            {userRepos.slice(0, 4).map((items) => (
+            {userRepos.sort(sorted).slice(0, 4).map((items) => (
                 <div className="col-sm-6" key={items.id}>
                     <RepoItem  
                         name={items.name} 

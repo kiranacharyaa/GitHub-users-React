@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import {AppProvider} from './context/AppContext';
 import {Navbar} from './components';
 import {Home, FollowersPage, ReposPage} from './pages/';

@@ -1,0 +1,37 @@
+.stat-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card .stat-card_icon {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 70px;
+    transform: rotate(-12deg);
+    opacity: 0.3;
+}
+
+.stat-card .stat-card_icon p {
+    margin-bottom: 0;
+}
+
+.stat-card-color div:nth-child(1) .stat-card {
+    background: #03a9f4;
+    color: #fff;
+}
+
+.stat-card-color div:nth-child(2) .stat-card {
+    background: #4caf50;
+    color: #fff;
+}
+
+.stat-card-color div:nth-child(3) .stat-card {
+    background: #ff9800;
+    color: #fff;
+}
+
+.stat-card-color div:nth-child(4) .stat-card {
+    background: #607d8b;
+    color: #fff;
+}

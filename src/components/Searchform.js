@@ -4,7 +4,7 @@ import {AppContext} from './../context/AppContext';
 
 function Searchform({setUserName, inputValue, setInputValue}) {
 
-    const {toggleError} = useContext(AppContext);
+    const {toggleError, fetchAllData} = useContext(AppContext);
 
     const takeInputValue = (e) => {
         setInputValue(e.target.value)
@@ -14,12 +14,16 @@ function Searchform({setUserName, inputValue, setInputValue}) {
         if(inputValue !== ""){
             setUserName(inputValue)
             toggleError(false, "");
+            fetchAllData(inputValue);
+            window.localStorage.setItem("userName",inputValue)
         }else{
             setUserName(demoData.login)
             toggleError(true, "Default user is loaded if search field is empty.");
         }
         setInputValue("");
     }
+
+
 
     return (
         <form className="form-inline my-2 my-lg-0">
