@@ -5,7 +5,7 @@ export const AppContext = createContext();
 
 export const AppProvider = ({children}) => {
     const url = "https://api.github.com/";
-    const localUserName = localStorage.getItem("userName");
+    const localUserName = sessionStorage.getItem("userName");
     const [userName, setUserName] = useState(demoData.login);
     const [userData, setUserData] = useState(demoData);
     const [userFollowers, setUserFollowers] = useState(demoDataFollowers);
@@ -24,7 +24,7 @@ export const AppProvider = ({children}) => {
         if(response.ok){
             const refdata = await response.json();
             setUserData(refdata);
-            localStorage.setItem("userData",JSON.stringify(refdata));
+            sessionStorage.setItem("userData",JSON.stringify(refdata));
             await Promise.all([
                 fetch(`${url}users/${userProp}/followers`),
                 fetch(`${url}users/${userProp}/repos`)
@@ -34,8 +34,8 @@ export const AppProvider = ({children}) => {
                 const [ followers, repos ] = data;
                 setUserFollowers(followers)
                 setUserRepos(repos)
-                localStorage.setItem("userDataFollowers",JSON.stringify(followers));
-                localStorage.setItem("userDataRepos",JSON.stringify(repos));
+                sessionStorage.setItem("userDataFollowers",JSON.stringify(followers));
+                sessionStorage.setItem("userDataRepos",JSON.stringify(repos));
             })
             .catch(err => console.log(err))
         }else{
@@ -74,9 +74,9 @@ export const AppProvider = ({children}) => {
 
     useEffect(() => {
         if(localUserName){
-            setUserData(JSON.parse(localStorage.getItem("userData")));
-            setUserFollowers(JSON.parse(localStorage.getItem("userDataFollowers")));
-            setUserRepos(JSON.parse(localStorage.getItem("userDataRepos")));
+            setUserData(JSON.parse(sessionStorage.getItem("userData")));
+            setUserFollowers(JSON.parse(sessionStorage.getItem("userDataFollowers")));
+            setUserRepos(JSON.parse(sessionStorage.getItem("userDataRepos")));
             setLoadingUserDOM(false);
         }else if(userName === demoData.login){
             setLoadingUserDOM(false);

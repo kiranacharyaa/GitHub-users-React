@@ -1,15 +1,16 @@
 import React, { useContext } from 'react';
 import RepoItem from './RepoItem';
 import {AppContext} from './../context/AppContext';
+import { Col, Row } from 'react-bootstrap';
 
 function Repo() {
 
     const {userRepos, sorted} = useContext(AppContext);
 
     return (
-        <div className="row">
+        <Row>
             {userRepos.sort(sorted).slice(0, 4).map((items) => (
-                <div className="col-sm-6" key={items.id}>
+                <Col sm={6} key={items.id}>
                     <RepoItem  
                         name={items.name} 
                         language={items.language}
@@ -17,10 +18,10 @@ function Repo() {
                         forks_count={items.forks_count}
                         updated_at={items.updated_at} 
                     />
-                </div>
+                </Col>
                 ))
             }
-        </div>
+        </Row>
     )
 }
 

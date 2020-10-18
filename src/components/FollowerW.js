@@ -5,7 +5,9 @@ import {Loader} from './../components';
 import UICard from './UICard';
 
 function FollowerW() {
-    const {setUserName, userFollowers, loadingUserFollower, fetchAllData} = useContext(AppContext);
+
+    const {userData, setUserName, userFollowers, loadingUserFollower, fetchAllData} = useContext(AppContext);
+    const followersCount = userData.followers.toLocaleString();
 
     function getThisUser(e){
         let userName = e.target.title;
@@ -14,7 +16,7 @@ function FollowerW() {
     }
 
     return (
-        <UICard icon="fa fa-users" title="Followers">
+        <UICard icon="fa fa-users" title={`Followers (${followersCount})`}>
             {
                 loadingUserFollower?
                 <Loader /> :
@@ -29,7 +31,7 @@ function FollowerW() {
                                     ))}
                                 </div>
                             :
-                            <div className="text-center">"No Followers Yet"</div>
+                            <div className="text-center">No Followers Yet</div>
                         }
                         {
                             (userFollowers.length >= 9)?<Link to="/followers" className="btn btn-outline-primary btn-block">View All</Link>:""

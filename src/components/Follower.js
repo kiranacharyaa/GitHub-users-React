@@ -17,7 +17,7 @@ function Follower(props) {
             <img src={avatar} alt="" className="follower-img"/>
             <div className="follower-data">
                 <h5 className="follower-name"><Link to="/" onClick={getThisUser}>{name}</Link></h5>
-                <p className="text-ellipsis"><small>{link}</small></p>
+                <p>{link}</p>
             </div>
         </div>
     )

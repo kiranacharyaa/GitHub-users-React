@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import {AppContext} from './../context/AppContext';
 import {APIRequest, FollowerW, Loader, RepoItem, UICard, Usercard} from './../components';
+import { Col, Container, Row } from 'react-bootstrap';
 
 function ReposPage() {
 
@@ -10,14 +11,14 @@ function ReposPage() {
         <>
             {loadingUserDOM? <Loader/> :
                 <section className="section-30">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-sm-3">
+                    <Container>
+                        <Row>
+                            <Col sm={3}>
                                 <Usercard />
                                 <APIRequest />
                                 <FollowerW />
-                            </div>
-                            <div className="col-sm-9">
+                            </Col>
+                            <Col sm={9}>
                                 <UICard icon="fa fa-database" title="All Repos">
                                     {
                                         userRepos.sort(sorted).map((items) => (
@@ -34,9 +35,9 @@ function ReposPage() {
                                         ))
                                     }
                                 </UICard>
-                            </div>
-                        </div>
-                    </div>
+                            </Col>
+                        </Row>
+                    </Container>
                 </section>
             }
         </>

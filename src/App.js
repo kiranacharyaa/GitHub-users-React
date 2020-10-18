@@ -1,6 +1,6 @@
 import React from 'react';
 import {AppProvider} from './context/AppContext';
-import {Navbar} from './components';
+import {NavBar} from './components';
 import {Home, FollowersPage, ReposPage} from './pages/';
 import {BrowserRouter, Route } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ function App() {
         <AppProvider>
             <div className="App">
                 <BrowserRouter>
-                    <Navbar />
+                    <NavBar />
                     <Route path="/" exact component={Home} />
                     <Route path="/followers" exact component={FollowersPage} />
                     <Route path="/repos" exact component={ReposPage} />
