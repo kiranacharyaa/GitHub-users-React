@@ -9,7 +9,7 @@ function App() {
     return (
         <AppProvider>
             <div className="App">
-                <BrowserRouter>
+                <BrowserRouter basename={process.env.PUBLIC_URL}>
                     <NavBar />
                     <Route path="/" exact component={Home} />
                     <Route path="/followers" exact component={FollowersPage} />

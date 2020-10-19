@@ -10,7 +10,7 @@ function NavBar() {
     return (
         <Navbar bg="light" expand="lg">
             <Container>
-                <Link className="navbar-brand" to="/"><img src="./github.svg" alt="Github Logo"/><b>GitHub Users</b></Link>
+                <Link className="navbar-brand" to="/"><i className="fab fa-github fa-2x m-r-5"></i> <b> GitHub Users</b></Link>
                 <Navbar.Toggle aria-controls="navbarGit" />
 
                 <Navbar.Collapse id="navbarGit">
