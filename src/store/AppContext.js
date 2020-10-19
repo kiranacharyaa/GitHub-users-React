@@ -6,6 +6,9 @@ export const AppContext = createContext();
 export const AppProvider = ({children}) => {
     const url = "https://api.github.com/";
     const localUserName = sessionStorage.getItem("userName");
+    const localUserData = sessionStorage.getItem("userData");
+    const localUserDataFollowers = sessionStorage.getItem("userDataFollowers");
+    const localUserDataRepos = sessionStorage.getItem("userDataRepos");
     const [userName, setUserName] = useState(demoData.login);
     const [userData, setUserData] = useState(demoData);
     const [userFollowers, setUserFollowers] = useState(demoDataFollowers);
@@ -74,7 +77,7 @@ export const AppProvider = ({children}) => {
     }
 
     useEffect(() => {
-        if(localUserName){
+        if(localUserName && localUserData && localUserDataFollowers && localUserDataRepos){
             setUserData(JSON.parse(sessionStorage.getItem("userData")));
             setUserFollowers(JSON.parse(sessionStorage.getItem("userDataFollowers")));
             setUserRepos(JSON.parse(sessionStorage.getItem("userDataRepos")));

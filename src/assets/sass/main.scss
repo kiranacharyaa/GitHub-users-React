@@ -1,11 +1,14 @@
+// Abstract
+@import "abstracts/variables";
+
+// Vendor
+@import "vendor/bootstrap";
+
 // Base
 @import "base/base";
 
 // Layout
 @import "layout/navbar";
-
-// Abstract
-@import "abstracts/variables";
 
 // Components
 @import "components/followerW";
