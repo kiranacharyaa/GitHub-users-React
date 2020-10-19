@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import {AppContext} from '../context/AppContext';
+import {AppContext} from '../store/AppContext';
 
 function Usercard() {
 
@@ -14,7 +14,7 @@ function Usercard() {
                 <h5>{name}</h5>
                 {(login)?<p className="text-muted">{login}</p>:""}
                 {(email)? <p className="m-b-5"><i className="fa fa-envelope"></i> {email}</p> : ""}
-                {(blog)?<p className="m-b-5"><i className="fa fa-web"></i> <a className="text-ellipsis" href={`http://${blog}`}>{blog}</a></p>:""}
+                {(blog)?<p className="m-b-5 text-ellipsis"><i className="fa fa-window-maximize"></i> <a href={`http://${blog}`} target="_blank">{blog}</a></p>:""}
                 {(location)?<p className="m-b-5"><i className="fa fa-map-marker-alt"></i> {location}</p>:""}
             </div>
         </div>

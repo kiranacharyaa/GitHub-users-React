@@ -1,5 +1,4 @@
 import React from 'react';
-import './infocard.css';
 
 function InfoCard({classModifier, icon, message, messageFull}) {
     return (

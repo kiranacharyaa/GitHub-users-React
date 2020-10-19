@@ -1,8 +1,9 @@
 import React from 'react';
-import {AppProvider} from './context/AppContext';
+import {AppProvider} from './store/AppContext';
 import {NavBar} from './components';
 import {Home, FollowersPage, ReposPage} from './pages/';
 import {BrowserRouter, Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
     return (

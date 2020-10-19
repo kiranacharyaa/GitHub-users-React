@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import {AppContext} from './../context/AppContext';
+import {AppContext} from './../store/AppContext';
 import {Usercard, Stats, Repo, Languages, FollowerW, Loader, UICard, APIRequest, Error} from './../components';
 import { Link } from 'react-router-dom';
 import {Col, Container, Row} from 'react-bootstrap';

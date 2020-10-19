@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import RepoItem from './RepoItem';
-import {AppContext} from './../context/AppContext';
+import {AppContext} from '../store/AppContext';
 import { Col, Row } from 'react-bootstrap';
 
 function Repo() {

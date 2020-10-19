@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Bar } from 'react-chartjs-2';
-import {AppContext} from './../../context/AppContext';
+import {AppContext} from '../../store/AppContext';
 
 function Languages() {
 

@@ -1,0 +1,47 @@
+.dot-loader {
+    display: flex;
+    justify-content: center;
+
+    .dots {
+        height: 40px;
+        margin-top: 30px;
+        z-index: 999999;
+
+        span {
+            transition: all 6000ms ease;
+            background: lighten($blue,30);
+            height: 15px;
+            width: 15px;
+            margin: 0 2px 0 0;
+            display: inline-block;
+            border-radius: 50%;
+            animation: wave 1s ease infinite;
+
+            &:nth-child(1) {
+                animation-delay: 0;
+            }
+
+            &:nth-child(2) {
+                animation-delay: 100ms;
+            }
+
+            &:nth-child(3) {
+                animation-delay: 200ms;
+            }
+        }
+    }
+}
+@keyframes wave {
+
+    0%,
+    70%,
+    100% {
+        transform: translate(0, 0);
+        background-color: lighten($blue,20);
+    }
+
+    30% {
+        transform: translate(0, -15px);
+        background-color: $blue;
+    }
+}

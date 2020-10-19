@@ -6,14 +6,13 @@ function Paginate({numbers, setCurrentPage}) {
     function getThePageData(e){
         setCurrentPage(e.target.text)
     }
-    
 
     return (
-        <div>
+        <>
             <Pagination>
                 {numbers.map(items => <Pagination.Item key={items} onClick={getThePageData}>{items}</Pagination.Item>)}
             </Pagination>
-        </div>
+        </>
     )
 }
 

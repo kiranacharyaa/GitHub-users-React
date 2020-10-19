@@ -20,6 +20,7 @@ export const AppProvider = ({children}) => {
 
     const fetchAllData = async(userProp) => {
         setLoadingUserDOM(true);
+        toggleError(false, "")
         const response = await fetch(`${url}users/${userProp}`);
         if(response.ok){
             const refdata = await response.json();

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
-import {AppContext} from './../context/AppContext';
-import {APIRequest, Follower, FollowerW, InfoCard, Loader, UICard, Usercard, Paginate} from './../components';
+import {AppContext} from './../store/AppContext';
+import {APIRequest, Follower, FollowerW, InfoCard, Loader, UICard, Usercard, Paginate, Error} from './../components';
 import { Col, Container, Row } from 'react-bootstrap';
 
 function FollowersPage() {
@@ -26,6 +26,7 @@ function FollowersPage() {
             {loadingUserDOM? <Loader/>:
                 <section className="section-30">
                     <Container>
+                        <Error />
                         <Row>
                             <Col sm={3}>
                                 <Usercard />

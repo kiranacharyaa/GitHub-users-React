@@ -11,8 +11,8 @@ import APIRequest from './APIRequest';
 import Error from './Error';
 import Paginate from './Paginate';
 import Languages from './charts/Languages';
-import InfoCard from './infocard/InfoCard';
-import Loader from './loader/Loader';
+import InfoCard from './InfoCard';
+import Loader from './Loader';
 
 import {demoData, demoDataFollowers} from './demoData';
 

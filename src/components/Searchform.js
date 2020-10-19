@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import {demoData} from './demoData';
-import {AppContext} from './../context/AppContext';
+import {AppContext} from '../store/AppContext';
 import { Button, Form, FormControl } from 'react-bootstrap';
 
 function Searchform({setUserName, inputValue, setInputValue}) {
@@ -27,10 +27,10 @@ function Searchform({setUserName, inputValue, setInputValue}) {
 
 
     return (
-        <Form className="form-inline my-2 my-lg-0">
-            <FormControl className="mr-sm-2" type="search" placeholder="Search" aria-label="Search"
-                value={inputValue} onChange={takeInputValue}/>
-            <Button variant="success" type="submit" onClick={searchUser}><i className="fa fa-search"></i> Search</Button>
+        <Form className="form-inline my-2 my-lg-0 nav-form" onSubmit={searchUser}>
+            <FormControl className="mr-sm-2" type="search" placeholder="Search User" aria-label="Search"
+                value={inputValue} onChange={takeInputValue} required/>
+            <Button variant="success" type="submit"><i className="fa fa-search"></i> Search</Button>
         </Form>
     )
 }

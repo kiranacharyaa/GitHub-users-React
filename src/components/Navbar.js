@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import Searchform from './Searchform';
-import {AppContext} from './../context/AppContext';
+import {AppContext} from './../store/AppContext';
 import {Link} from 'react-router-dom';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 
@@ -15,8 +15,8 @@ function NavBar() {
 
                 <Navbar.Collapse id="navbarGit">
                     <Nav className="ml-auto">
-                        <Nav.Link href="/followers">Followers</Nav.Link>
-                        <Nav.Link href="/repos">Repos</Nav.Link>
+                        <Link className="nav-link" to="/followers">Followers</Link>
+                        <Link className="nav-link" to="/repos">Repos</Link>
                     </Nav>
                     <Searchform 
                         setUserName={setUserName}

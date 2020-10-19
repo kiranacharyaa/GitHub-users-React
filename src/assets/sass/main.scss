@@ -3,14 +3,9 @@
 
 // Layout
 @import "layout/navbar";
-@import "layout/footer";
-@import "layout/sidebar";
-@import "layout/header";
 
 // Abstract
 @import "abstracts/variables";
-@import "abstracts/colors";
-@import "abstracts/mixins";
 
 // Components
 @import "components/followerW";
@@ -19,14 +14,5 @@
 @import "components/follower-card";
 @import "components/repo-card";
 @import "components/stat-card";
-
-// Pages
-
-// Themes
-@import "themes/dark-theme";
-@import "themes/light-theme";
-@import "themes/material-theme";
-@import "themes/flat-theme";
-
-// Vendors
-
+@import "components/loader";
+@import "components/info-card";

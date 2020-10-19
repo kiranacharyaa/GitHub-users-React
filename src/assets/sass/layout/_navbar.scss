@@ -12,3 +12,14 @@
     height: 35px;
     margin-right: 10px;
 }
+
+@media only screen and (max-width: 767px){
+    .nav-form{
+        .form-control{
+            margin-bottom: 3px;
+        }
+        .btn{
+            width:100%;
+        }
+    }
+}
